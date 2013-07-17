@@ -856,7 +856,10 @@
 				},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[87.611671, 41.568401]
+				"coordinates":[
+					-87.611671,
+					41.568401
+					]
 				}
 		},
 		{
