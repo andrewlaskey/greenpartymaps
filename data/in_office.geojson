@@ -1704,5 +1704,6 @@
 				"coordinates":[43.072948,-89.386688]
 				}
 		}
-	]
+	],
+	"type": "FeatureCollection"
 }
