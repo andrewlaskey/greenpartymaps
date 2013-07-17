@@ -86,9 +86,9 @@
 				"State": "CA",
 				"Location": "Fairfax At-Large, Marin County"
 				},
-			"geometry":{
-				"type":"Point",
-				"coordinates":[37.985168, -122.590378]
+			"geometry": {
+				"type": "Point",
+				"coordinates": [37.985168, -122.590378]
 				}
 		},
 		{
@@ -241,7 +241,7 @@
 				"Office": "Board of Supervisors",
 				"State": "CA",
 				"Location": "District 5, Mendocino County"
-				}
+				},
 			"geometry":{
 				"type":"Point",
 				"coordinates":[39.307621,-123.79892]
