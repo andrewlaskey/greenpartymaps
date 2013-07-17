@@ -309,7 +309,7 @@
 				},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[34.44783", -119.752762]
+				"coordinates":[34.44783, -119.752762]
 				}
 		},
 		{
@@ -645,7 +645,7 @@
 				"Office": "School Board",
 				"State": "CO",
 				"Location": "District e, Fremont RE-3, Fremont County"
-				}
+				},
 			"geometry":{
 				"type":"Point",
 				"coordinates":[38.440639, -105.238136]
@@ -817,7 +817,7 @@
 				},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[42.049541, -89.432732}
+				"coordinates":[42.049541, -89.432732]
 				}
 		},
 		{
