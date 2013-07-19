@@ -7,4 +7,6 @@ The purpose of this project is to show where Greens are active across the countr
 
 * [Green Party Website](http://www.gp.org)
 * [Green Party Office Holders](http://www.gp.org/elections/officeholders/index.php)
+* [Ballot Access](http://www.gp.org/ballotstatus/), 2008
+* [Voter Registration Data](http://web.greens.org/stats/), 2005
 
