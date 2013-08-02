@@ -39,5 +39,5 @@ Thumbs.db
 # Local Folders #
 ######################
 master-hidden
-.sass-cache
+.sass-cache/
 *.scssc
