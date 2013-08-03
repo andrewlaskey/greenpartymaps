@@ -471,15 +471,72 @@
 }());
 
 
+//Choropleth Functions
+function getColor(d) {
+    return d > 1 ? '#006D2C' :
+           d > 0.8  ? '#2CA25F' :
+           d > 0.6  ? '#66C2A4' :
+           d > 0.4  ? '#99D8C9' :
+           d > 0.2   ? '#CCECE6' :
+           d > 0   ? '#EDF8FB' :
+           				'#d0d0d0';
+}
+
+function style(feature) {
+	var borderColor = 'none';
+	if (feature.properties.ballot_status) {
+		borderColor = '#00ba4b';
+	}
+    return {
+        fillColor: getColor(feature.properties.voters),
+        weight: 2,
+        opacity: 1,
+        color: borderColor,
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+
+//custom icon
+var greenIcon = new L.Icon({
+    iconUrl: 'images/marker-icon.png',
+    iconRetinaUrl: 'images/marker-icon@2x.png'
+    });
+
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#00ba4b",
+    color: "#00a141",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
 
 //MAP SETUP
 var map = L.map('map').setView([37.8, -96], 4);
 
+var voterInfo = L.geoJson(statesData, {
+	style: style,
+	onEachFeature: function (feature, layer) {
+        layer.bindPopup("<h4>" + feature.properties.name + "</h4><p>% registered Greens: " + feature.properties.voters + "</p>");
+    }
+}).addTo(map);
+
 var greensInOffice = L.geoJson(inOfficeData, {
+	pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    },
 	onEachFeature: function (feature, layer) {
         layer.bindPopup("<h4>" + feature.properties.Name + "</h4><p>" + feature.properties.Office + "</p><p>" + feature.properties.Location + ", " + feature.properties.State + "</p>");
     }
 }).addTo(map);
+
+var controllers = {
+	"Voter Information" : voterInfo,
+	"Greens in Office" : greensInOffice
+}
+
+L.control.layers(null,controllers).addTo(map);
 
 L.tileLayer.provider('OpenStreetMap').addTo(map);
 
