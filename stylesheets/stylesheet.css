@@ -7,4 +7,35 @@
 MAP
 ********************/
 #map {
-  height: 350px; }
+  height: 400px; }
+
+/********************
+LAYOUT
+********************/
+footer {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  footer:before, footer:after {
+    content: " ";
+    display: table; }
+  footer:after {
+    clear: both; }
+
+.column {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .column:last-child {
+    margin-right: 0; }
+
+/********************
+FOOTER
+********************/
+footer {
+  margin-top: 2em; }
+  footer ul {
+    padding: 0;
+    list-style-type: none; }

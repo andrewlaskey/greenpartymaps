@@ -1,0 +1,11 @@
+/********************
+LAYOUT
+********************/
+
+footer {
+	@include outer-container;
+}
+
+.column {
+	@include span-columns(4);
+}

@@ -518,16 +518,16 @@ var map = L.map('map').setView([37.8, -96], 4);
 var voterInfo = L.geoJson(statesData, {
 	style: style,
 	onEachFeature: function (feature, layer) {
-        layer.bindPopup("<h4>" + feature.properties.name + "</h4><p>% registered Greens: " + feature.properties.voters + "</p>");
+        layer.bindPopup("<h4>" + feature.properties.name + "</h4><p>" + feature.properties.voters + "% of voters</p>");
     }
-}).addTo(map);
+});
 
 var greensInOffice = L.geoJson(inOfficeData, {
 	pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
 	onEachFeature: function (feature, layer) {
-        layer.bindPopup("<h4>" + feature.properties.Name + "</h4><p>" + feature.properties.Office + "</p><p>" + feature.properties.Location + ", " + feature.properties.State + "</p>");
+        layer.bindPopup("<h4>" + feature.properties.Name + "</h4><p>" + feature.properties.Office + "<br />" + feature.properties.Location + ", " + feature.properties.State + "</p>");
     }
 }).addTo(map);
 
