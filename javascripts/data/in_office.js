@@ -1223,7 +1223,7 @@ var inOfficeData = {
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[-100.763329, 41.136318]
+				"coordinates":[-96.4031, 40.4835]
 				}
 		},
 		{
